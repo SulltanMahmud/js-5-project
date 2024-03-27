@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const modal = document.getElementById("modal");
 const modalShow = document.getElementById("show-modal");
 const modalClose = document.getElementById("modal-close");
@@ -45,8 +44,8 @@ function validate(nameValue, urlValue) {
 
 // Build Bookmarks DOM
 function buildBookmarks() {
-    // remove all bookmarks element
-    bookmarkContainer.textContent=''
+  // remove all bookmarks element
+  bookmarkContainer.textContent = "";
   // build items
   bookmarks.forEach((bookmark) => {
     const { name, url } = bookmark;
@@ -101,17 +100,17 @@ function fetchBookmarks() {
   buildBookmarks();
 }
 
-// Delate a 
+// Delate a
 
-function delateBookmark(url){
-   bookmarks.forEach((bookmark, i)=>{
-    if(bookmark.url === url){
-        bookmarks.splice(i, 1)
+function delateBookmark(url) {
+  bookmarks.forEach((bookmark, i) => {
+    if (bookmark.url === url) {
+      bookmarks.splice(i, 1);
     }
-   });
-    // Update bookmarks array in local storage, re-populate DOM
-    localStorage.setItem('bookmarks',JSON.stringify(bookmarks));
-    fetchBookmarks();
+  });
+  // Update bookmarks array in local storage, re-populate DOM
+  localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
+  fetchBookmarks();
 }
 
 // Handle Data From Form
@@ -145,7 +144,6 @@ bookmarkForm.addEventListener("submit", storeBookmark);
 
 // On load ,fetch bookmarks
 fetchBookmarks();
-=======
 const modal = document.getElementById("modal");
 const modalShow = document.getElementById("show-modal");
 const modalClose = document.getElementById("modal-close");
@@ -153,8 +151,6 @@ const bookmarkForm = document.getElementById("bookmark-form");
 const websiteNameEl = document.getElementById("website-name");
 const websiteurlEl = document.getElementById("website-url");
 const bookmarkContainer = document.getElementById("bookmarks-container");
-
-let bookmarks = [];
 
 // Show Modal , Focus on input
 function showModal() {
@@ -192,8 +188,8 @@ function validate(nameValue, urlValue) {
 
 // Build Bookmarks DOM
 function buildBookmarks() {
-    // remove all bookmarks element
-    bookmarkContainer.textContent=''
+  // remove all bookmarks element
+  bookmarkContainer.textContent = "";
   // build items
   bookmarks.forEach((bookmark) => {
     const { name, url } = bookmark;
@@ -248,17 +244,17 @@ function fetchBookmarks() {
   buildBookmarks();
 }
 
-// Delate a 
+// Delate a
 
-function delateBookmark(url){
-   bookmarks.forEach((bookmark, i)=>{
-    if(bookmark.url === url){
-        bookmarks.splice(i, 1)
+function delateBookmark(url) {
+  bookmarks.forEach((bookmark, i) => {
+    if (bookmark.url === url) {
+      bookmarks.splice(i, 1);
     }
-   });
-    // Update bookmarks array in local storage, re-populate DOM
-    localStorage.setItem('bookmarks',JSON.stringify(bookmarks));
-    fetchBookmarks();
+  });
+  // Update bookmarks array in local storage, re-populate DOM
+  localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
+  fetchBookmarks();
 }
 
 // Handle Data From Form
@@ -292,4 +288,3 @@ bookmarkForm.addEventListener("submit", storeBookmark);
 
 // On load ,fetch bookmarks
 fetchBookmarks();
->>>>>>> e53ea77 (initial commit)
